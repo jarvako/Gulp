@@ -1,0 +1,12 @@
+extends layout/app
+
+block page
+    include chunk/header
+
+    h1.title Главная !
+    img(src="img/animal.jpg", alt="")
+    ul.news
+        each item in news
+            li= item.name
+    
+    include chunk/footer

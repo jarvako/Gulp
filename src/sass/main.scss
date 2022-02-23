@@ -1,0 +1,26 @@
+$base-font-size: 52px;
+
+@mixin ph {
+    @media (max-width: 700px){
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../img/water.png") no-repeat;
+    
+    font-size: $base-font-size;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    @include ph {
+        color: #fff;
+        background-color: #000 ;
+    }
+}
+
+@import "block/*.scss";
+
